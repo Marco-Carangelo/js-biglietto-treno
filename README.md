@@ -22,7 +22,7 @@ Risoluzione:
             Scrivo un messaggio di errore chiedendo all'utente di inserire valori validi e ricarico la pagina.
         }
 
-3. Calcoliamo il prezzo pieno del biglietto e lo inseriamo in una variabile (fullPrice).
+3. Calcoliamo il prezzo pieno del biglietto e lo inseriamo in una variabile (price).
 4. Usiamo due strutture If Else nidificate per verificare se l'utente ha diritto a degli sconti in base all'età ed usiamo la funzione       toFixed() per arrotondare il risultato alla seconda cifra decimale:
 
     if (età è minore di 18){
