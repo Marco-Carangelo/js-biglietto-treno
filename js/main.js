@@ -7,6 +7,7 @@ const userAge = parseInt(Number(prompt("Inserire l'età")));
 let fullPrice = 0;
 let price = 0;
 const kmPrice = 0.21;
+let resultPrint;
 
 //Struttura di controllo per verificare che i dati inseriti siano validi
 
@@ -27,21 +28,31 @@ if (userAge < 18) {
 
     price = fullPrice * 0.8;
     console.log("L'utente ha diritto ad uno sconto del 20%");
+    resultPrint = "L'utente ha diritto ad uno sconto del 20%. Il prezzo finale è: "
 
 } else {
     if (userAge > 65) {
 
         price = fullPrice * 0.6;
         console.log("L'utente ha diritto ad uno sconto del 40%");
+        resultPrint = "L'utente ha diritto ad uno sconto del 40%. Il prezzo finale è: "
+
 
     } else {
 
         price = fullPrice;
         console.log("L'utente non ha diritto a sconti");
+        resultPrint = "L'utente non ha diritto a sconti. Il prezzo finale è: "
+
 
     }
 
 }
+
+//Stampa del risultato in un elemento HTML
+
+document.getElementById('train-ticket').innerHTML = resultPrint + price.toFixed(2);
+
 
 //Stampa in console dei risultati
 
